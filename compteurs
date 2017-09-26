@@ -1,0 +1,51 @@
+/* Listes non-ordonnées */
+
+<nav>
+		<ul id="principal">
+			<li><a href="#h1-forme" title="">Forme</a></li>
+			<li><a href="#h1-histo" title="">Historique</a></li>
+			<li><a href="#h1-varie" title="">Variations</a></li>
+			<li><a href="#h1-cat" title="">Le Ceiling Cat et le Basement Cat</a></li>
+			<li><a href="#h1-medias" title="">Les lolcats dans les autres médias</a>
+				<ul>
+					<li><a href="#h2-presseAN" title="">Presse anglophone</a></li>
+					<li><a href="#h2-presseFR" title="">Presse française</a></li>
+				</ul>
+			</li>
+			<li><a href="#h1-refs" title="">Notes et références</a></li>
+			<li>Voir aussi
+				<ul>
+					<li>Article connexe</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+ul {list-style-type : none ; }
+
+body {
+    counter-reset : T1 0 T2 0 ;
+}
+    /*Titre niveau 1*/
+ul#principal > li {
+    counter-increment : T1 ;
+    counter-reset : T2 ;
+}
+
+ul#principal > li::before {
+    content : counter(T1) " - ";
+}
+    /*Titre niveau 2*/
+ul > li > ul > li {
+    counter-increment : T2 ;
+}
+
+ul#principal > li > ul > li::before {
+    content : counter(T1)"."counter(T2) " - ";
+}
+
+/* Listes ordonnées */
+
+
+
+/* Titres */

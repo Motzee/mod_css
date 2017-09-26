@@ -1,0 +1,40 @@
+* {
+    box-sizing : border-box ;
+}
+
+body {
+    margin : 0 ;
+    padding : 0 ;
+    font-family : sans-serif ;
+}
+
+p, li {
+    max-width : 100ch ;
+    font-size : 1rem ;
+}
+
+/* Titres */
+h1 {
+    font-size : 2rem ;
+    text-align : center ;
+}
+
+h2 {
+    font-size : 1.8rem ;
+}
+
+h3 {
+    font-size : 1.6rem ;
+    margin-left : 25px ;
+}
+
+/* Menus de navigation*/
+nav ul {
+    list-style : none ;
+    padding : 0 ;
+    margin : 0
+}
+
+nav ul a {
+    text-decoration : none ;
+}
